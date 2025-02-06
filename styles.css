@@ -1,0 +1,166 @@
+ /* General Styles */
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Make Images Circular */
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: aliceblue;
+    transition: transform 0.2s;
+    object-fit: cover;
+    border: 15px solid rgb(173, 243, 11);
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Hide sections */
+.hidden {
+    display: none;
+}
+
+/* Results Section */
+.results {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.result-box {
+    padding: 10px;
+    margin: 10px;
+    flex: 1;
+    min-width: 120px;
+}
+
+.result-box h2 {
+    font-size: 1.5rem;
+}
+
+.result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.win { color: green; }
+.lose { color: red; }
+.draw { color: yellow; }
+
+/* Score and Reset Button */
+#score {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+#replayButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #0083b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: none;
+}
+.button-rules{
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #0083b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#replayButton:hover {
+    background: #00b4db;
+}
+
+/* Center the replay button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Leaderboard */
+#leaderboard {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#leaderboard li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+ /* Popup Styles */
+ .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    width: 80%;
+    max-width: 500px;
+}
+
+.popup ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popup ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #0083b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.popup button:hover {
+    background: #00b4db;
+}

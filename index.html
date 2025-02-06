@@ -4,11 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>asov-rock-paper-scissors</title>
-    <link href="./src/output.css" rel="stylesheet">
+    <!-- <link href="./src/output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
-    <h1 class="text-3xl text-blue-600 font-bold underline">
-        asov-rock-paper-scissors
-      </h1>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <button class="button-rules" id="rulesButton">Rules of Game</button>
+        
+        <select class="button-rules" id="mode">
+            <option value="pve">Player vs. Bot</option>
+            <option value="pvp">Player vs. Player</option>
+        </select>
+        <p id="score">Score: <span id="userScore">0</span> - <span id="botScore">0</span></p>
+
+        <p class="result">Make Your Move!</p>
+
+        <div id="choices">
+            <img class="option_image" src="image\icon-rock.svg" data-choice="rock">
+            <img class="option_image" src="image\icon-paper.svg" data-choice="paper">
+            <img class="option_image" src="image\icon-scissors.svg" data-choice="scissors">
+        </div>
+
+        <div class="results hidden">
+            <div class="result-box">
+                <h2>You</h2>
+                <img id="userResult" src="image\icon-rock.svg">
+            </div>
+            <div class="result-box">
+                <h2>Bot/Player2</h2>
+                <img id="botResult" src="image\icon-paper.svg">
+            </div>
+        </div>
+
+        
+
+        <div class="button-container">
+            <button id="replayButton">Replay</button>
+        </div>
+
+        
+
+        <!-- Popup for Rules -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="rulesPopup">
+        <h2>Game Rules</h2>
+        <ol>
+            <li>Choices: Players can choose between three options: "rock", "paper", or "scissors".</li>
+            <li>Winner Determination:
+                <ul>
+                    <li>Rock beats Scissors.</li>
+                    <li> Scissors beats Paper.</li>
+                    <li> Paper beats Rock</li>
+                    <li> If both players choose the same option, it's a Draw.</li>
+                </ul>
+                <li>Scoring:
+                <ul>
+                    <li> Player scores a point if they win a round.</li>
+                    <li>Bot scores a point if the bot wins a round.</li>
+                    <li> The score for both the player and the bot is stored in localStorage to persist across page refreshes.</li>
+                </ul>
+            </li>
+            <li><b>play with Bot.</li>
+            <li>Replay Option: After a round, the player can choose to play again by clicking the replay button.</li>
+        </ol>
+        <button id="closePopup">Close</button>
+    </div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="pop.js" defer></script>
 </body>
 </html>
