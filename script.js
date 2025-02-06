@@ -83,7 +83,8 @@ replayButton.addEventListener("click", () => {
     choicesDiv.classList.remove("hidden");
     resultsDiv.classList.add("hidden");
     replayButton.style.display = "none";
-    resultText.textContent = "Make Your Move!";
+    resultText.textContent = "Make another Move!";
+    location.reload(); // Refreshes the page
 });
 
 optionImages.forEach(img => img.addEventListener("click", handleOptionClick));
